@@ -325,6 +325,10 @@ config:
   # Items to exclude from config.resourceFilters
   resourceFiltersExclude: []
 
+  # -- resourceFilters additional list
+  # Items to include from config.resourceFilters
+  resourceExtraFilters: []
+  
 # Metrics configuration
 metricsConfig:
 
