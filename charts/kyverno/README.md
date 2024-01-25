@@ -293,6 +293,7 @@ The chart values are organised per component.
 | config.excludeKyvernoNamespace | bool | `true` | Exclude Kyverno namespace Determines if default Kyverno namespace exclusion is enabled for webhooks and resourceFilters |
 | config.resourceFiltersExcludeNamespaces | list | `[]` | resourceFilter namespace exclude Namespaces to exclude from the default resourceFilters |
 | config.resourceFiltersExclude | list | `[]` | resourceFilters exclude list Items to exclude from config.resourceFilters |
+| config.resourceExtraFilters | list | `[]` | resourceFilters additional list Items to add to config.resourceFilters |
 
 ### Metrics config
 
