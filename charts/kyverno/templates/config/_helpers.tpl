@@ -35,6 +35,9 @@
 {{- if .Values.config.excludeKyvernoNamespace -}}
   {{- $resourceFilters = prepend .Values.config.resourceFilters (printf "[*/*,%s,*]" (include "kyverno.namespace" .)) -}}
 {{- end -}}
+{{- range $resourceExtra := .Values.config.resourceExtraFilters -}}
+  {{- $resourceFilters = prepend $resourceFilters $resourceExtra -}}
+{{- end -}}
 {{- range $resourceExclude := .Values.config.resourceFiltersExclude -}}
   {{- $resourceFilters = without $resourceFilters $resourceExclude -}}
 {{- end -}}
